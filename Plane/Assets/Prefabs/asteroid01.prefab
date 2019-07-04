@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 136821142855782710}
   m_Layer: 0
   m_Name: asteroid01
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +127,9 @@ MonoBehaviour:
   speed: 3
   minX: -4.45
   maxX: 3.37
+  hp: 70
   asteroidExp: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
+  meshRenderer: {fileID: 23853057404802318}
 --- !u!136 &136821142855782710
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -5,8 +5,10 @@ using UnityEngine;
 public class AsteroidSpwan : MonoBehaviour {
 	public GameObject[] asstoridPre;
 	// Use this for initialization
+
 	void Start () {
-		InvokeRepeating("CreateAsteriod",0,0.8f);
+		float s = 0.6f;
+		InvokeRepeating("CreateAsteriod",0, s);
 	}
 	
 	// Update is called once per frame

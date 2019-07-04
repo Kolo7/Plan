@@ -6,7 +6,8 @@ public class Player : MonoBehaviour
 {
     //按键控制飞机运动
     public float speed = 10.0f;
-
+	public int hp = 100;
+	public GameObject playerExp;
     void Start()
     {
 
@@ -52,4 +53,22 @@ public class Player : MonoBehaviour
         //将pos赋值给飞机的赋值
         transform.position = pos;
     }
+
+	public void Hurt(int damage){
+		CameraShake.shake = 0.3f;
+		switch (Application.platform) {
+		case RuntimePlatform.Android:
+			Handheld.Vibrate ();	
+			break;
+		}
+
+		hp -= damage;
+		if(hp<=0){
+			GameObject exp = Instantiate (playerExp,transform.position ,Quaternion.identity);
+			Destroy(gameObject);
+			Destroy (exp, 1f);
+		}
+	}
+
+
 }
