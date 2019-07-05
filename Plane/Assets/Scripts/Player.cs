@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -8,19 +9,24 @@ public class Player : MonoBehaviour
     public float speed = 10.0f;
 	public int hp = 100;
 	public GameObject playerExp;
+	public GameObject hudun;
+	private BulletSpwan bullSpwan;
+	public int hudunStatus;
+	public float minX = -4.31f;
+	public float maxX = 4.38f;
+	public float minZ = -6.46f;
+	public float maxZ = 6.68f;
+	public Slider hpSlider;
     void Start()
     {
-
+		
+		bullSpwan = transform.Find ("BulletSpwan").GetComponent<BulletSpwan> ();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //检测左键是否被按下 Input
-        //x:Vector3.right
-        //y:Vector3.up
-        //z:Vector3.forward
-        //Time.deltaTime:从上一帧到这一帧的时间
+		OnMouseDrag ();
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position -= Vector3.right * Time.deltaTime * speed;
@@ -37,24 +43,44 @@ public class Player : MonoBehaviour
         {
             transform.position -= Vector3.forward * Time.deltaTime * speed;
         }
+
+
     }
 
 
     //鼠标拖拽
     private void OnMouseDrag()
     {
-        //飞机的坐标与鼠标的坐标相同
-        //Input.mousePosition 鼠标坐标
-        //transform.position 飞机坐标
-        //将屏幕坐标转为世界坐标（屏幕→世界）
+
+
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //pos.y改为0
-        pos.y = 0;
-        //将pos赋值给飞机的赋值
-        transform.position = pos;
+		pos.y = 0;
+		transform.position = pos;
+		if (transform.position.x <= minX )
+			transform.position = new Vector3 (minX, 0, transform.position.z);
+		//else
+		//	transform.position = new Vector3 (-4.31f, transform.position.y, transform.position.z);
+		
+		if (transform.position.x >= maxX)
+			transform.position = new Vector3 (maxX, 0, transform.position.z);
+		//else
+		//	transform.position = new Vector3 (4.38f, transform.position.y, transform.position.z);
+		
+		if (transform.position.z<=minZ)
+			transform.position = new Vector3 (transform.position.x, 0, minZ);
+		//else
+		//	transform.position = new Vector3 (transform.position.x, 0, -6.46f);
+
+		if (transform.position.z>=maxZ)
+			transform.position = new Vector3 (transform.position.x, 0, maxZ);
+		//else
+		//	transform.position = new Vector3 (transform.position.x, 0, 6.68f);
+
     }
 
 	public void Hurt(int damage){
+		if (hudunStatus == 1)
+			return;
 		CameraShake.shake = 0.3f;
 		switch (Application.platform) {
 		case RuntimePlatform.Android:
@@ -63,12 +89,38 @@ public class Player : MonoBehaviour
 		}
 
 		hp -= damage;
+
 		if(hp<=0){
+			hp = 0;
 			GameObject exp = Instantiate (playerExp,transform.position ,Quaternion.identity);
 			Destroy(gameObject);
 			Destroy (exp, 1f);
 		}
+		hpSlider.value = (float)hp/100f;
 	}
 
+	public void AddHP(int _hp){
+		hp += _hp;
+		if (hp > 100)
+			hp = 100;
+		hpSlider.value = (float)hp/100f;
+	}
 
+	public void Sandan(){
+		bullSpwan.Fire ();
+	}
+
+	public void OpenHudun(){
+		if (hudunStatus == 0) {
+			hudun.SetActive (true);
+			Invoke ("Closehudun",5);
+			hudunStatus = 1;
+		}
+	}
+
+	public void Closehudun(){
+		hudun.SetActive (false);
+		hudunStatus = 0;
+	}
+		
 }

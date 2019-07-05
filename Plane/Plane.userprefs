@@ -1,14 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UIManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player.cs" Line="63" Column="4" />
-      <File FileName="Assets\Scripts\CameraShake.cs" Line="29" Column="18" />
-      <File FileName="Assets\Scripts\Enemy.cs" Line="32" Column="36" />
-      <File FileName="Assets\Scripts\EnemySpawn.cs" Line="24" Column="14" />
-      <File FileName="Assets\Scripts\Asteroid.cs" Line="41" Column="3" />
-      <File FileName="Assets\Scripts\BulletSpwan.cs" Line="25" Column="20" />
-      <File FileName="Assets\Scripts\Bullet.cs" Line="44" Column="45" />
+      <File FileName="Assets\Scripts\CameraShake.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemySpawn.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Star.cs" Line="20" Column="13" />
+      <File FileName="Assets\Scripts\StarSpawn.cs" Line="6" Column="31" />
+      <File FileName="Assets\Scripts\Enemy.cs" Line="74" Column="56" />
+      <File FileName="Assets\Scripts\Bullet.cs" Line="10" Column="17" />
+      <File FileName="Assets\Scripts\UIManager.cs" Line="11" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

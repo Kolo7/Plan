@@ -23,13 +23,17 @@ public class BulletSpwan : MonoBehaviour
     void Update()
     {
 		if(isPlayer==0 && Input.GetKeyDown(KeyCode.Q) ){
-			if (!IsInvoking ("SanDan")) {
-				CancelInvoke ("CreateBullet");
-				InvokeRepeating ("SanDan", 0, 0.2f);
-				Invoke ("SanDanToNoraml",5);
-			}	
+			Fire ();
 		}
     }
+
+	public void Fire(){
+		if (!IsInvoking ("SanDan")) {
+			CancelInvoke ("CreateBullet");
+			InvokeRepeating ("SanDan", 0, 0.2f);
+			Invoke ("SanDanToNoraml",5);
+		}	
+	}
 
 	void SanDan()
 	{

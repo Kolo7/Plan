@@ -8,6 +8,7 @@ TagManager:
   - Asteroid
   - Plane
   - Enemy
+  - UIManager
   layers:
   - Default
   - TransparentFX

@@ -263,7 +263,9 @@ MonoBehaviour:
   minX: -4.05
   maxX: 4.15
   hp: 100
+  dir: {x: -1, y: 0, z: 0}
   meshRenderer: {fileID: 23299243268691204}
+  enemyExp: {fileID: 100012, guid: 384371afbb4354cc9a3fc68eab303756, type: 2}
 --- !u!136 &136400205818971674
 CapsuleCollider:
   m_ObjectHideFlags: 1

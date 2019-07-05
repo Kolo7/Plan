@@ -29,14 +29,18 @@ public class Asteroid : MonoBehaviour {
 	private void OnTriggerEnter(Collider other){
 		
 		if (other.tag == "Bullet") {
-			Destroy (other.gameObject);
+			if (other.GetComponent<Bullet> ().dir == 0) {
+				Destroy (other.gameObject);
+				Hurt(other.GetComponent<Bullet> ().atk);
+			}
 
-			//Die ();
-			Hurt(other.GetComponent<Bullet> ().atk);
 		}else if (other.tag == "Plane") {
-			Die ();
-			Player plalyerProperty = other.GetComponent<Player> ();
-			plalyerProperty.Hurt (30);
+			if (other.GetComponent<Player> ().hudunStatus == 0) {
+				Die ();
+				Player plalyerProperty = other.GetComponent<Player> ();
+				plalyerProperty.Hurt (30);
+			}
+
 		}
 	}
 

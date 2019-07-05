@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
      <Compile Include="Assets\Scripts\Asteroid.cs" />
      <Compile Include="Assets\Scripts\AsteroidSpwan.cs" />
      <Compile Include="Assets\Scripts\Bg.cs" />
@@ -61,6 +62,9 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemySpawn.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Star.cs" />
+     <Compile Include="Assets\Scripts\StarSpawn.cs" />
+     <Compile Include="Assets\Scripts\UIManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
