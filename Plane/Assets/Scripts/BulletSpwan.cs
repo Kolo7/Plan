@@ -40,7 +40,7 @@ public class BulletSpwan : MonoBehaviour
 		int num = 6;
 		int angle = 60;
 		for (int i = 0; i < num; i++) {
-			GameObject ob = Instantiate(bulletPre,
+			Instantiate(bulletPre,
 				transform.position,
 				Quaternion.Euler(new Vector3(0, i*angle/num-25, 0)));
 		}
@@ -52,7 +52,8 @@ public class BulletSpwan : MonoBehaviour
 	}
     void CreateBullet()
     {
-		GameObject bullet =  Instantiate(bulletPre,
+		
+		GameObject bullet =  Instantiate(bulletPre,	
             transform.position,
             Quaternion.Euler(new Vector3(0, 0, 0)));
 		if (isPlayer == 1)

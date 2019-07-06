@@ -248,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPre: {fileID: 1614515926962480, guid: 60769ba17f23bf445ab288351fcab829, type: 2}
   isPlayer: 1
+  attackClip: {fileID: 8300000, guid: 1be4472894949437694aead55c6da60f, type: 3}
 --- !u!114 &114918242785795142
 MonoBehaviour:
   m_ObjectHideFlags: 1

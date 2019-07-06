@@ -236,4 +236,3 @@ MonoBehaviour:
   speed: 20
   atk: 27
   dir: 0
-  player: {fileID: 0}

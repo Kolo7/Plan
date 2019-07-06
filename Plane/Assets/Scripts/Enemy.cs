@@ -71,7 +71,7 @@ public class Enemy : MonoBehaviour {
 	}
 
 	public void Die(){
-		socerManager.GetComponent<UIManager> ().socer += 100;
+		socerManager.GetComponent<UIManager> ().socre += 100;
 		Destroy (gameObject);
 		GameObject exp = Instantiate (enemyExp,transform.position ,Quaternion.identity);
 		Destroy (exp, 1f);

@@ -235,3 +235,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   atk: 27
+  dir: 0

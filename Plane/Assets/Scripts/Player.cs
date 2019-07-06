@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     //按键控制飞机运动
-    public float speed = 10.0f;
+    public float speed = 50.0f;
 	public int hp = 100;
 	public GameObject playerExp;
 	public GameObject hudun;
@@ -43,12 +43,10 @@ public class Player : MonoBehaviour
         {
             transform.position -= Vector3.forward * Time.deltaTime * speed;
         }
-
-
     }
 
 
-    //鼠标拖拽
+
     private void OnMouseDrag()
     {
 
