@@ -28,11 +28,9 @@ public class Asteroid : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other){
 		
-		if (other.tag == "Bullet") {
-			if (other.GetComponent<Bullet> ().dir == 0) {
-				Destroy (other.gameObject);
-				Hurt(other.GetComponent<Bullet> ().atk);
-			}
+		if (other.tag == "Bullet2") {
+			Destroy (other.gameObject);
+			Hurt(other.GetComponent<Bullet> ().atk);
 
 		}else if (other.tag == "Plane") {
 			if (other.GetComponent<Player> ().hudunStatus == 0) {

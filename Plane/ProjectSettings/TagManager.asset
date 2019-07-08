@@ -9,6 +9,8 @@ TagManager:
   - Plane
   - Enemy
   - UIManager
+  - DieUI
+  - Bullet2
   layers:
   - Default
   - TransparentFX

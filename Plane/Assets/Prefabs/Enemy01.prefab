@@ -158,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1983502706009802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 6.03}
+  m_LocalPosition: {x: 3.43, y: 0, z: 1.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4504097884650528}
@@ -247,8 +247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  minX: -4.05
-  maxX: 4.15
+  minX: -3.49
+  maxX: 3.43
   hp: 50
   dir: {x: -1, y: 0, z: 0}
   meshRenderer: {fileID: 23591986637785602}
@@ -266,7 +266,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPre: {fileID: 1614515926962480, guid: 60769ba17f23bf445ab288351fcab829, type: 2}
   isPlayer: 1
-  attackClip: {fileID: 8300000, guid: 1be4472894949437694aead55c6da60f, type: 3}
 --- !u!136 &136813361774480642
 CapsuleCollider:
   m_ObjectHideFlags: 1

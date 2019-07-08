@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour {
 	public int dir;
 	// Use this for initialization
 	void Start () {
-		
+		setProperty (dir);
 	}
 	
 	// Update is called once per frame
@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour {
 
 	public void setProperty(int isPlayer){
 		if (isPlayer == 1 ) {
-			speed = 9.0f;
+			speed = 5f;
 			atk = 10;
 			dir = 1;
 		}

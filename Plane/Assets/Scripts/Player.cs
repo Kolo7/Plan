@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 	public float minZ = -6.46f;
 	public float maxZ = 6.68f;
 	public Slider hpSlider;
+	private GameObject socerManager;
     void Start()
     {
 		
@@ -91,6 +92,10 @@ public class Player : MonoBehaviour
 		if(hp<=0){
 			hp = 0;
 			GameObject exp = Instantiate (playerExp,transform.position ,Quaternion.identity);
+			socerManager = GameObject.FindGameObjectWithTag ("UIManager");
+			socerManager.GetComponent<UIManager> ().Success ();
+			socerManager.GetComponent<UIManager> ().AddRank ();
+			GameObject ob = GameObject.FindGameObjectWithTag ("DieUI");
 			Destroy(gameObject);
 			Destroy (exp, 1f);
 		}

@@ -1,15 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UIManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Bullet.cs">
     <Files>
-      <File FileName="Assets\Scripts\Star.cs" Line="16" Column="3" />
-      <File FileName="Assets\Scripts\StarSpawn.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Bullet.cs" Line="27" Column="26" />
-      <File FileName="Assets\Scripts\UIManager.cs" Line="72" Column="62" />
-      <File FileName="Assets\Scripts\BulletSpwan.cs" Line="9" Column="22" />
-      <File FileName="Assets\Scripts\Enemy.cs" Line="70" Column="4" />
-      <File FileName="Assets\Scripts\Player.cs" Line="19" Column="2" />
-      <File FileName="Assets\Scripts\Asteroid.cs" Line="66" Column="86" />
+      <File FileName="Assets\Scripts\Enemy.cs" Line="44" Column="28" />
+      <File FileName="Assets\Scripts\Bullet.cs" Line="34" Column="13" />
+      <File FileName="Assets\Scripts\Cannonball.cs" Line="7" Column="21" />
+      <File FileName="Assets\Scripts\BulletSpwan.cs" Line="18" Column="7" />
+      <File FileName="Assets\Scripts\CannonballSpawn.cs" Line="17" Column="3" />
+      <File FileName="Assets\Scripts\Asteroid.cs" Line="29" Column="46" />
+      <File FileName="Assets\Scripts\Boss.cs" Line="21" Column="38" />
+      <File FileName="Assets\Scripts\EnemySpawn.cs" Line="10" Column="22" />
+      <File FileName="Assets\Scripts\AsteroidSpwan.cs" Line="10" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

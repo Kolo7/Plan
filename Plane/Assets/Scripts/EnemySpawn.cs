@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour {
 	public GameObject[] enemyPre;
+	public GameObject[] bossPre;
 	// Use this for initialization
 	void Start () {
-		float s = 3f;
-		InvokeRepeating("CreateEnemy",0, s);
+		float enemyTime = 4f;
+		float bossTime = 30f;
+		InvokeRepeating("CreateEnemy",0, enemyTime);
+		InvokeRepeating("CreateBoss",0, bossTime);
 	}
 	
 	// Update is called once per frame
@@ -24,6 +27,12 @@ public class EnemySpawn : MonoBehaviour {
 			index = 1;
 		}
 		Instantiate(enemyPre[index],
+			transform.position,
+			Quaternion.Euler(new Vector3(0, 0, 0)));
+	}
+
+	void CreateBoss(){
+		Instantiate(bossPre[0],
 			transform.position,
 			Quaternion.Euler(new Vector3(0, 0, 0)));
 	}

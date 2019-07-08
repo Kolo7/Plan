@@ -7,7 +7,7 @@ public class AsteroidSpwan : MonoBehaviour {
 	// Use this for initialization
 
 	void Start () {
-		float s = 0.6f;
+		float s = 2f;
 		InvokeRepeating("CreateAsteriod",0, s);
 	}
 	

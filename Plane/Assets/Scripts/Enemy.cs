@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour {
 	void Start () {
 		socerManager = GameObject.FindGameObjectWithTag ("UIManager");
 		float x = Random.Range (minX, maxX);
+		Debug.Log (x);
 		transform.position = new Vector3 (x,transform.position.y, transform.position.z);
 	}
 	
@@ -40,7 +41,7 @@ public class Enemy : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other){
 
-		if (other.tag == "Bullet" && other.GetComponent<Bullet>().dir == 0) {
+		if (other.tag == "Bullet2" && other.GetComponent<Bullet>().dir == 0) {
 
 			Destroy (other.gameObject);
 			Hurt(other.GetComponent<Bullet> ().atk);

@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1877468051848714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2, y: 0, z: 1.6}
+  m_LocalPosition: {x: 3.44, y: 0, z: -5.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4470197889752502}
@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  minX: -4.1
-  maxX: 4.2
+  minX: -3.44
+  maxX: 3.44
   hp: 100
   asteroidExp: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
   meshRenderer: {fileID: 23826180300476762}

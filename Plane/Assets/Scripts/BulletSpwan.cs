@@ -6,6 +6,7 @@ using UnityEngine;
 public class BulletSpwan : MonoBehaviour
 {
     public GameObject bulletPre;
+
 	public int isPlayer;
     // Use this for initialization
     void Start()
@@ -15,7 +16,7 @@ public class BulletSpwan : MonoBehaviour
 		if(isPlayer==0)
         	InvokeRepeating("CreateBullet",0,0.2f);
 		else
-			InvokeRepeating("CreateBullet",0,0.8f);
+			InvokeRepeating("CreateBullet",0,1.4f);
 
     }
 
