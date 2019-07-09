@@ -15,7 +15,7 @@ public class CannonballSpawn : MonoBehaviour {
 	{
 		
 	}
-
+		
 	void CreateCanonball()
 	{
 		int num = 3;

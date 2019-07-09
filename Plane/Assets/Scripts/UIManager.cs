@@ -19,9 +19,13 @@ public class UIManager : MonoBehaviour {
 	public GameObject pausePanel;
 	private bool pausePanelStatus;
 	public Slider voiceSlider;
+	public Slider backgroundSlider;
+	public Slider bulletSlider;
+	public Slider explostionSlider;
 	public GameObject successUI;
 	public GameObject failUI;
 	public GameObject dieUI;
+	public GameObject voiceUI;
 
 	public GameObject mainCamera;
 	public GameObject bullet;
@@ -88,6 +92,20 @@ public class UIManager : MonoBehaviour {
 		Explostion_enemy.GetComponent<AudioSource> ().volume = voiceSlider.value;
 	}
 
+	public void ChangeBulletVoice(){
+		bullet.GetComponent<AudioSource> ().volume = bulletSlider.value;
+		bullet2.GetComponent<AudioSource> ().volume = bulletSlider.value;
+	}
+	public void ChangeExplostionVoice(){
+		Explostion_asteroid.GetComponent<AudioSource> ().volume = explostionSlider.value;
+		Explostion_player.GetComponent<AudioSource> ().volume = explostionSlider.value;
+		Explostion_enemy.GetComponent<AudioSource> ().volume = explostionSlider.value;
+	}
+
+	public void ChangeBackgroundVoice(){
+		mainCamera.GetComponent<AudioSource>().volume = backgroundSlider.value;
+	}
+
 	public void Success(){
 		dieUI.SetActive (true);
 		if (rankLength > 0 && socre < rank [rankLength - 1])
@@ -116,6 +134,14 @@ public class UIManager : MonoBehaviour {
 		threeText.text = rank [2].ToString();
 		fourText.text = rank [3].ToString();
 		fiveText.text = rank [4].ToString();
+	}
+
+	public void LookVoicePanel(){
+		voiceUI.SetActive (true);
+	}
+
+	public void CloseVoicePanel(){
+		voiceUI.SetActive (false);
 	}
 	public void closeRank(){
 		rankImage.SetActive (false);

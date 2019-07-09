@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		OnMouseDrag ();
+		//OnMouseDrag ();
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position -= Vector3.right * Time.deltaTime * speed;
@@ -51,29 +51,18 @@ public class Player : MonoBehaviour
     private void OnMouseDrag()
     {
 
-
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		pos.y = 0;
 		transform.position = pos;
-		if (transform.position.x <= minX )
+		if (transform.position.x <= minX)
 			transform.position = new Vector3 (minX, 0, transform.position.z);
-		//else
-		//	transform.position = new Vector3 (-4.31f, transform.position.y, transform.position.z);
-		
 		if (transform.position.x >= maxX)
 			transform.position = new Vector3 (maxX, 0, transform.position.z);
-		//else
-		//	transform.position = new Vector3 (4.38f, transform.position.y, transform.position.z);
-		
 		if (transform.position.z<=minZ)
 			transform.position = new Vector3 (transform.position.x, 0, minZ);
-		//else
-		//	transform.position = new Vector3 (transform.position.x, 0, -6.46f);
-
 		if (transform.position.z>=maxZ)
 			transform.position = new Vector3 (transform.position.x, 0, maxZ);
-		//else
-		//	transform.position = new Vector3 (transform.position.x, 0, 6.68f);
+
 
     }
 

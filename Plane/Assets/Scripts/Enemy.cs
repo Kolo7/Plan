@@ -17,8 +17,9 @@ public class Enemy : MonoBehaviour {
 	void Start () {
 		socerManager = GameObject.FindGameObjectWithTag ("UIManager");
 		float x = Random.Range (minX, maxX);
-		Debug.Log (x);
 		transform.position = new Vector3 (x,transform.position.y, transform.position.z);
+		if (x < 0)
+			dir = Vector3.right;
 	}
 	
 	// Update is called once per frame

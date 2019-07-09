@@ -5,9 +5,10 @@ using UnityEngine;
 public class Cannonball : MonoBehaviour {
 	public float speed = 2.0f;
 	public int atk = 50;
+
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
