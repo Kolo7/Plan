@@ -46,7 +46,7 @@ public class UIManager : MonoBehaviour {
 	public void StartGame()
 	{
 		
-		SceneManager.LoadScene("plane");
+		SceneManager.LoadScene("scene");
 
 	}
 
